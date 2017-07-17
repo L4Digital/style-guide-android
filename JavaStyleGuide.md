@@ -313,16 +313,15 @@ public class MainActivity extends Activity {
 
     public static final String EXTRA_TITLE = "extra_title";
 
-    private String mTitle;
-    private TextView mTextViewTitle;
+    private TextView titleTextView;
 
     @Override
     public void onCreate() {
         ...
     }
 
-    public void setTitle(String title) {
-        mTitle = title;
+    public void setTitle(String text) {
+        titleTextView.setText(text);
     }
 
     private void setUpView() {
@@ -385,21 +384,20 @@ Instrument i =
 ~~~
 
 ### Follow Field Naming Conventions
-* Non-public, non-static field names start with m.
-* Static field names start with s.
-* Other fields start with a lowercase letter.
-* Public static final fields (constants) are ALL\_CAPS\_WITH\_UNDERSCORES.
+* Field names are written in `lowerCamelCase`
+* Static final fields (constants) are ALL\_CAPS\_WITH\_UNDERSCORES.
 
 For example:
 
 ~~~java
 public class MyClass {
     public static final int SOME_CONSTANT = 42;
+    private static final String ARGUMENT_NAME = "arg_name";
     public int publicField;
-    private static MyClass sSingleton;
-    int mPackagePrivate;
-    private int mPrivate;
-    protected int mProtected;
+    int packagePrivateField;
+    protected int protectedField;
+    private static MyClass singleton;
+    private int privateField;
 }
 ~~~
 
@@ -506,17 +504,17 @@ When annotations are applied to a class, method, or constructor, they are listed
 /** This is the documentation block about the method */
 @AnnotationA
 @AnnotationB
-public void MyMethod() { }
+public void myMethod() { }
 ~~~
 
 Annotations applying to fields should be listed on the same line, unless there is more than one annotation.
 
 ~~~java
-@Nullable String mFirstName;
+@Nullable String firstName;
 
 @AnnotationA
 @AnnotationB
-ContactInfo mContactInfo;
+ContactInfo contactInfo;
 ~~~
 
 ### Treat Acronyms as Words

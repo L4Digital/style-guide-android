@@ -4,29 +4,30 @@ Kotlin is a statically-typed programming language that runs on the JVM and can a
 All Kotlin code is expected to adhere to our [Java Style Guidelines](JavaStyleGuide.md) where applicable.
 
 ### Resources
-* [Kotlin Language Reference](https://kotlinlang.org/docs/reference/)
+* [Android Kotlin Guides](https://android.github.io/kotlin-guides/style.html)
 * [Kotlin Coding Conventions](http://kotlinlang.org/docs/reference/coding-conventions.html)
-* [Using Kotlin for Android Development](http://kotlinlang.org/docs/reference/android-overview.html)
+* [Kotlin Language Reference](https://kotlinlang.org/docs/reference/)
 
 ## Kotlin Language Rules
 We follow standard Kotlin coding conventions with the addition of a few rules:
 
 ### Naming
-* Type names are written in `UpperCamelCase`
-* Method and properties are written in `lowerCamelCase`
-* Compile-time constants are written in `ALL_CAPS_WITH_UNDERSCORES`
+* Type names are written as `UpperCamelCase`
+* Method and properties are written as `lowerCamelCase`
+* Constants and immutable properties are written as `ALL_CAPS_WITH_UNDERSCORES`
 
 For example:
 
 ~~~kotlin
 class MyClass {
-    companion object {
-        const val LOG_TAG = "MyClass"
-    }
     
     private val field = 0
 
     fun getValue() = field
+
+    companion object {
+        const val LOG_TAG = "MyClass"
+    }
 }
 ~~~
 
@@ -86,10 +87,13 @@ val result = if (condition) 1 else 2
 
 ### Companion objects
 
-Companion objects should always be declared at the top of the class. Fields within a companion object should follow our naming conventions:
+Companion objects should always be declared at the bottom of the class. Fields within a companion object should follow our naming conventions:
 
 ~~~kotlin
 class MainActivity : Activity() {
+
+    // ...
+
     companion object {
         const val EXTRA_TITLE = "extra_title"
         const val EXTRA_URL = "extra_url"
@@ -122,7 +126,7 @@ return when (field) {
 Global extension functions should be used moderately and only when the extended class source code is not available or modifiable.
 
 ## License
-    Copyright 2017 L4 Digital LLC. All rights reserved.
+    Copyright 2018 L4 Digital, a Globant company. All rights reserved.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

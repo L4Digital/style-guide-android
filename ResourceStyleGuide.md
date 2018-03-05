@@ -189,7 +189,7 @@ This is bad:
 ~~~
 
 ## License
-    Copyright 2017 L4 Digital LLC. All rights reserved.
+    Copyright 2018 L4 Digital, a Globant company. All rights reserved.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

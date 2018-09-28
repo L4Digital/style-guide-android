@@ -126,7 +126,7 @@ return when (field) {
 Global extension functions should be used moderately and only when the extended class source code is not available or modifiable.
 
 ## License
-    Copyright 2018 L4 Digital, a Globant company. All rights reserved.
+    Copyright 2018 Globant. All rights reserved.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

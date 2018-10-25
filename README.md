@@ -1,7 +1,7 @@
 # Style Guidelines for Android
-This document includes the Globant Seattle style guidelines for Android development. It is sourced from Android’s official [Code Style Guidelines for Contributors](https://source.android.com/source/code-style.html), JetBrain's [Kotlin Coding Conventions](http://kotlinlang.org/docs/reference/coding-conventions.html), and Ribot's [Android Guidelines](https://github.com/ribot/android-guidelines/blob/master/project_and_code_guidelines.md) with some modifications. Not all existing code follows these rules, but all new code is expected to.
+This document includes our style guidelines for Android development. It is sourced from Android’s official [Code Style Guidelines for Contributors](https://source.android.com/source/code-style.html), JetBrain's [Kotlin Coding Conventions](http://kotlinlang.org/docs/reference/coding-conventions.html), and Ribot's [Android Guidelines](https://github.com/ribot/android-guidelines/blob/master/project_and_code_guidelines.md) with some modifications. Not all existing code follows these rules, but all new code is expected to.
 
-You can import these style guidelines into Android Studio's Code Style from [this Scheme](Globant-Android.xml).
+You can import these style guidelines into Android Studio's Code Style from [this Scheme](StyleGuide-Android.xml).
 
 ## Consistency
 If you're editing code, take a few minutes to look at the code around you and determine its style. If they use spaces around their if clauses, you should too. If their comments have little boxes of stars around them, make your comments have little boxes of stars around them too.
@@ -14,7 +14,7 @@ The point of having style guidelines is to have a common vocabulary of coding, s
 * [Resource Style Guide](ResourceStyleGuide.md)
 
 ## License
-    Copyright 2018 Globant. All rights reserved.
+    Copyright 2018 L4 Digital. All rights reserved.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

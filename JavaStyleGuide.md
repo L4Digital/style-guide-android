@@ -146,34 +146,6 @@ There are conventions for using Android’s Java libraries and tools. In some ca
 ## Java Style Rules
 
 ### Use Javadoc Standard Comments
-Every file should have a copyright statement at the top. Then a package statement and import statements should follow, each block separated by a blank line. We have provided [copyright templates in xml format](copyrights) that can be imported into Android Studio and IntelliJ.
-
-~~~java
-/*
- * Copyright (C) 2013 The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-package com.android.internal.foo;
-
-import android.os.Blah;
-import android.view.Yada;
-
-import java.sql.ResultSet;
-import java.sql.SQLException;
-~~~
-
 Every class and nontrivial public method you write should contain a Javadoc comment with at least one sentence describing what the class or method does. This sentence should start with a 3rd person descriptive verb.
 
 Examples:
@@ -440,9 +412,9 @@ if (condition)
 ~~~
 
 ### Limit Line Length
-Each line of text in your code should be at most 100 characters long.
+Each line of text in your code should be at most 120 characters long.
 
-Exception: if a comment line contains an example command or a literal URL longer than 100 characters, that line may be longer than 100 characters for ease of cut and paste.
+Exception: if a comment line contains an example command or a literal URL longer than 120 characters, that line may be longer than 120 characters for ease of cut and paste.
 
 Exception: import lines can go over the limit because humans rarely see them. This also simplifies tool writing.
 
@@ -561,18 +533,3 @@ void testIsDistinguishable_protanopia() {
     assertTrue(colorMatcher.isDistinguishable(Color.X, Color.Y))
 }
 ~~~
-
-## License
-    Copyright 2018 L4 Digital. All rights reserved.
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-         http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.

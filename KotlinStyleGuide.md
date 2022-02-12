@@ -52,7 +52,7 @@ If a function returns Unit, the return type should be omitted:
 
 ~~~kotlin
 fun foo() { // ": Unit" is omitted here
-    ...
+    // ...
 }
 ~~~
 
@@ -73,13 +73,38 @@ class MyClass {
 }
 ~~~
 
-We require the body of a statement to start on a new line unless the body is a lambda parameter with a single line, then this is allowed:
+We require the body of a statement to start on a new line with the following exceptions:
+
+* The body is a lambda parameter with a single line:
 
 ~~~kotlin
 observable?.let { subscribe(it) }
 ~~~
 
-Ternary operations in Kotlin are represented as if/else statements and are allowed to be a single line:
+* The body is a single method call:
+
+~~~kotlin
+if (condition) doSomething()
+~~~
+
+* The body only contains the body of a keyword, then that keyword can be lifted:
+
+~~~kotlin
+if (condition) with(something) {
+    setupSomethingAdapter(this)
+    setupSomethingViews(this)
+}
+
+// ...
+
+if (condition) try {
+    doSomething()
+} finally {
+    logSomething()
+}
+~~~
+
+* Ternary operations in Kotlin are represented as if/else statements and are allowed to be a single line:
 
 ~~~kotlin
 val result = if (condition) 1 else 2
@@ -124,18 +149,3 @@ return when (field) {
 
 ### Extensions
 Global extension functions should be used moderately and only when the extended class source code is not available or modifiable.
-
-## License
-    Copyright 2018 L4 Digital. All rights reserved.
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-         http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.

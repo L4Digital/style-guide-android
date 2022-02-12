@@ -111,33 +111,6 @@ Style names are written in `UpperCamelCase`.
 
 ## XML Style Rules
 
-### Use XML Comments
-Every file should have a copyright statement at the top. Then layout tags should follow, each block separated by a blank line. We have provided [copyright templates in xml format](https://drive.google.com/open?id=0B5fbz6yN_ewPTXhqdl9VdEhNWFU) that can be imported into Android Studio and IntelliJ.
-
-~~~xml
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Copyright (C) 2013 The Android Open Source Project
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the "License");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~      http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
-  -->
-
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-~~~
-
 ### Use Self Closing Tags
 When an XML element doesn’t have any contents, you **must** use self closing tags.
 
@@ -169,6 +142,7 @@ As a general rule you should try to group similar attributes together. A good wa
 1. Other layout attributes, sorted alphabetically
 1. Remaining attributes, sorted alphabetically
 1. Style
+1. Tools attributes, sorted alphabetically
 
 Each attribute should also be written on a new line.
 
@@ -187,18 +161,3 @@ This is bad:
 <TextView android:id="@+id/text_view_profile"
     android:layout_width="wrap_content" android:layout_height="wrap_content" />
 ~~~
-
-## License
-    Copyright 2018 L4 Digital. All rights reserved.
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-         http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
